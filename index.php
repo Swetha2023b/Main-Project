@@ -1,3 +1,15 @@
+<?php
+// session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database="db_sports";
+$db = mysqli_connect($servername, $username, $password, $database);
+if (!$db) {
+  die("Connection failed: " . mysqli_connect_error());
+}
+?>
+
 <!doctype html>
 <html lang="en-US" xmlns:fb="https://www.facebook.com/2008/fbml" xmlns:addthis="https://www.addthis.com/help/api-spec"  prefix="og: http://ogp.me/ns#" class="no-js">
 <head>
@@ -90,11 +102,13 @@
 				</script>
 				<div class="btn-group btn-group-toggle mb-5" data-toggle="buttons">
 				  <label class="btn btn-primary active">
-					<input type="radio" name="options" value="1" autocomplete="off" checked> Front Camera
+				  <a href="view.php" class="button" style="color: white;">View List</a>
 				  </label>
 				  
 				</div>
 			</div>
+			<br>
+			<br>
 			
 			
 			<div class="col-sm-3">
